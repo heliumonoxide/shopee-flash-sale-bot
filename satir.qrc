@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="images">
+    <file>Group 69.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>canva_pro.png</file>
+  </qresource>
+</RCC>
