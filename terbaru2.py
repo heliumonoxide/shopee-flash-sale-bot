@@ -246,7 +246,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowIcon(QtGui.QIcon('canva_pro.png'))
+        MainWindow.setWindowIcon(QtGui.QIcon(':/icons/canva_pro.png'))
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.startButton.setText(_translate("MainWindow", "START"))
         self.exitButton.setText(_translate("MainWindow", "EXIT"))
