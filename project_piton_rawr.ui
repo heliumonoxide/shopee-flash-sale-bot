@@ -10,6 +10,36 @@
     <height>1080</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1080</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1080</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
   <property name="mouseTracking">
    <bool>false</bool>
   </property>
@@ -34,8 +64,8 @@ background-color: #FF7A00;
    <widget class="QPushButton" name="startButton">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>700</y>
+      <x>570</x>
+      <y>750</y>
       <width>461</width>
       <height>71</height>
      </rect>
@@ -85,8 +115,8 @@ background-color: #FF7A00;
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>810</y>
+      <x>570</x>
+      <y>860</y>
       <width>461</width>
       <height>71</height>
      </rect>
@@ -179,8 +209,8 @@ background-color: #FF7A00;
    <widget class="QLabel" name="email">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>320</y>
+      <x>340</x>
+      <y>260</y>
       <width>421</width>
       <height>56</height>
      </rect>
@@ -188,7 +218,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -218,8 +248,8 @@ background-color: #FF7A00;
    <widget class="QDateTimeEdit" name="dateTimeInput">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>800</y>
+      <x>90</x>
+      <y>790</y>
       <width>371</width>
       <height>41</height>
      </rect>
@@ -234,8 +264,8 @@ background-color: #FF7A00;
    <widget class="QRadioButton" name="shopeePayButton">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>920</y>
+      <x>90</x>
+      <y>940</y>
       <width>141</width>
       <height>30</height>
      </rect>
@@ -258,8 +288,8 @@ background-color: #FF7A00;
    <widget class="QRadioButton" name="shopeePayLaterButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>920</y>
+      <x>90</x>
+      <y>900</y>
       <width>191</width>
       <height>30</height>
      </rect>
@@ -282,8 +312,8 @@ background-color: #FF7A00;
    <widget class="QTextEdit" name="input_email">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>370</y>
+      <x>430</x>
+      <y>310</y>
       <width>374</width>
       <height>40</height>
      </rect>
@@ -329,7 +359,7 @@ background-color: #FF7A00;
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>130</y>
+      <y>110</y>
       <width>571</width>
       <height>81</height>
      </rect>
@@ -337,7 +367,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>48</pointsize>
+      <pointsize>36</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -356,7 +386,7 @@ background-color: #FF7A00;
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>220</y>
+      <y>180</y>
       <width>571</width>
       <height>81</height>
      </rect>
@@ -364,7 +394,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>48</pointsize>
+      <pointsize>36</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -382,8 +412,8 @@ background-color: #FF7A00;
    <widget class="QLabel" name="password">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>450</y>
+      <x>340</x>
+      <y>350</y>
       <width>421</width>
       <height>56</height>
      </rect>
@@ -391,7 +421,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -421,8 +451,8 @@ background-color: #FF7A00;
    <widget class="QTextEdit" name="input_password">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>500</y>
+      <x>430</x>
+      <y>400</y>
       <width>374</width>
       <height>40</height>
      </rect>
@@ -467,8 +497,8 @@ background-color: #FF7A00;
    <widget class="QLabel" name="shopee_link">
     <property name="geometry">
      <rect>
-      <x>-40</x>
-      <y>610</y>
+      <x>0</x>
+      <y>620</y>
       <width>451</width>
       <height>56</height>
      </rect>
@@ -476,7 +506,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -506,8 +536,8 @@ background-color: #FF7A00;
    <widget class="QLabel" name="date_time">
     <property name="geometry">
      <rect>
-      <x>-40</x>
-      <y>740</y>
+      <x>0</x>
+      <y>730</y>
       <width>511</width>
       <height>56</height>
      </rect>
@@ -515,7 +545,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -545,8 +575,8 @@ background-color: #FF7A00;
    <widget class="QTextEdit" name="input_link">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>670</y>
+      <x>90</x>
+      <y>680</y>
       <width>374</width>
       <height>40</height>
      </rect>
@@ -591,8 +621,8 @@ background-color: #FF7A00;
    <widget class="QLabel" name="methods">
     <property name="geometry">
      <rect>
-      <x>-40</x>
-      <y>860</y>
+      <x>0</x>
+      <y>840</y>
       <width>451</width>
       <height>56</height>
      </rect>
@@ -600,7 +630,7 @@ background-color: #FF7A00;
     <property name="font">
      <font>
       <family>Poppins</family>
-      <pointsize>16</pointsize>
+      <pointsize>12</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -627,6 +657,121 @@ background-color: #FF7A00;
      <number>90</number>
     </property>
    </widget>
+   <widget class="QLabel" name="pathFeatures">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>450</y>
+      <width>681</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;</string>
+    </property>
+    <property name="text">
+     <string>Pilihan (use &quot;,&quot; to split between menus)</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>90</number>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="input_pilihan">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>500</y>
+      <width>501</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="midLineWidth">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="BCAButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>900</y>
+      <width>191</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>BCA</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="BNIButton">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>940</y>
+      <width>191</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poppins</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>BNI</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -642,7 +787,7 @@ background-color: #FF7A00;
  </widget>
  <resources>
   <include location="satir.qrc"/>
-  <include location="../Desktop/pythonCASLAB/front_end_shopee/satir.qrc"/>
+  <include location="../Desktop/pythonCASLAB/satir.qrc"/>
  </resources>
  <connections/>
 </ui>
