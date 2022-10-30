@@ -33,6 +33,7 @@ class Ui_MainWindow(object):
         self.exitButton.setGeometry(QtCore.QRect(540, 810, 461, 71))
         self.exitButton.setSizeIncrement(QtCore.QSize(0, 0))
         self.exitButton.setBaseSize(QtCore.QSize(0, 0))
+        self.exitButton.clicked.connect(lambda:self.close)
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(18)
