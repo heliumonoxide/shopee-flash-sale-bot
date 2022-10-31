@@ -17,14 +17,14 @@ from backend import *
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(960, 960)
+        MainWindow.resize(1300, 960)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(1080, 1080))
-        MainWindow.setMaximumSize(QtCore.QSize(1080, 1080))
+        MainWindow.setMinimumSize(QtCore.QSize(1300, 960))
+        MainWindow.setMaximumSize(QtCore.QSize(1300, 960))
         MainWindow.setSizeIncrement(QtCore.QSize(0, 0))
         MainWindow.setBaseSize(QtCore.QSize(0, 0))
         MainWindow.setMouseTracking(False)
@@ -40,7 +40,7 @@ class Ui_MainWindow(object):
 
 
         self.startButton = QtWidgets.QPushButton(self.centralwidget)
-        self.startButton.setGeometry(QtCore.QRect(520, 700, 461, 71))
+        self.startButton.setGeometry(QtCore.QRect(620, 750, 461, 71))
         self.startButton.setSizeIncrement(QtCore.QSize(0, 0))
         self.startButton.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
 
 
         self.exitButton = QtWidgets.QPushButton(self.centralwidget)
-        self.exitButton.setGeometry(QtCore.QRect(520, 800, 461, 71))
+        self.exitButton.setGeometry(QtCore.QRect(620, 840, 461, 71))
         self.exitButton.setSizeIncrement(QtCore.QSize(0, 0))
         self.exitButton.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
@@ -78,7 +78,7 @@ class Ui_MainWindow(object):
 
 
         self.judul = QtWidgets.QLabel(self.centralwidget)
-        self.judul.setGeometry(QtCore.QRect(430, 50, 541, 81))
+        self.judul.setGeometry(QtCore.QRect(530, 50, 541, 81))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(24)
@@ -91,14 +91,14 @@ class Ui_MainWindow(object):
 
 
         self.human = QtWidgets.QLabel(self.centralwidget)
-        self.human.setGeometry(QtCore.QRect(-10, 20, 521, 621))
+        self.human.setGeometry(QtCore.QRect(90, 20, 521, 621))
         self.human.setText("")
         self.human.setPixmap(QtGui.QPixmap(":/images/Group 69.png"))
         self.human.setObjectName("human")
 
 
         self.email = QtWidgets.QLabel(self.centralwidget)
-        self.email.setGeometry(QtCore.QRect(340, 260, 421, 56))
+        self.email.setGeometry(QtCore.QRect(440, 260, 421, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -114,7 +114,7 @@ class Ui_MainWindow(object):
 
 
         self.dateTimeInput = QtWidgets.QDateTimeEdit(self.centralwidget)
-        self.dateTimeInput.setGeometry(QtCore.QRect(90, 790, 371, 41))
+        self.dateTimeInput.setGeometry(QtCore.QRect(190, 680, 371, 41))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(9)
@@ -123,7 +123,7 @@ class Ui_MainWindow(object):
 
 
         self.shopeePayButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.shopeePayButton.setGeometry(QtCore.QRect(90, 940, 141, 30))
+        self.shopeePayButton.setGeometry(QtCore.QRect(190, 830, 141, 30))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(11)
@@ -135,21 +135,21 @@ class Ui_MainWindow(object):
         self.shopeePayButton.setObjectName("shopeePayButton")
 
 
-        self.shopeePayLaterButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.shopeePayLaterButton.setGeometry(QtCore.QRect(90, 900, 191, 30))
+        self.mandiriButton = QtWidgets.QRadioButton(self.centralwidget)
+        self.mandiriButton.setGeometry(QtCore.QRect(190, 790, 191, 30))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.shopeePayLaterButton.setFont(font)
-        self.shopeePayLaterButton.setText("ShopeePay Later")
-        self.shopeePayLaterButton.setStyleSheet("color:white;")
-        self.shopeePayLaterButton.setObjectName("shopeePayLaterButton")
+        self.mandiriButton.setFont(font)
+        self.mandiriButton.setText("Mandiri")
+        self.mandiriButton.setStyleSheet("color:white;")
+        self.mandiriButton.setObjectName("mandiriButton")
 
 
         self.input_email = QtWidgets.QTextEdit(self.centralwidget)
-        self.input_email.setGeometry(QtCore.QRect(430, 310, 374, 40))
+        self.input_email.setGeometry(QtCore.QRect(530, 310, 374, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -169,7 +169,7 @@ class Ui_MainWindow(object):
 
 
         self.judul2 = QtWidgets.QLabel(self.centralwidget)
-        self.judul2.setGeometry(QtCore.QRect(430, 110, 571, 81))
+        self.judul2.setGeometry(QtCore.QRect(530, 110, 650, 81))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(36)
@@ -182,7 +182,7 @@ class Ui_MainWindow(object):
 
 
         self.judul3 = QtWidgets.QLabel(self.centralwidget)
-        self.judul3.setGeometry(QtCore.QRect(430, 180, 571, 81))
+        self.judul3.setGeometry(QtCore.QRect(530, 180, 571, 81))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(36)
@@ -195,7 +195,7 @@ class Ui_MainWindow(object):
 
 
         self.password = QtWidgets.QLabel(self.centralwidget)
-        self.password.setGeometry(QtCore.QRect(340, 350, 421, 56))
+        self.password.setGeometry(QtCore.QRect(440, 350, 421, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -212,7 +212,7 @@ class Ui_MainWindow(object):
 
         self.input_password = QtWidgets.QLineEdit(self.centralwidget)
         self.input_password.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.input_password.setGeometry(QtCore.QRect(430, 400, 374, 40))
+        self.input_password.setGeometry(QtCore.QRect(530, 400, 374, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -228,7 +228,7 @@ class Ui_MainWindow(object):
 
 
         self.shopee_link = QtWidgets.QLabel(self.centralwidget)
-        self.shopee_link.setGeometry(QtCore.QRect(0, 620, 451, 56))
+        self.shopee_link.setGeometry(QtCore.QRect(540, 620, 451, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -244,7 +244,7 @@ class Ui_MainWindow(object):
 
 
         self.date_time = QtWidgets.QLabel(self.centralwidget)
-        self.date_time.setGeometry(QtCore.QRect(0, 730, 511, 56))
+        self.date_time.setGeometry(QtCore.QRect(100, 620, 511, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -260,7 +260,7 @@ class Ui_MainWindow(object):
 
 
         self.input_link = QtWidgets.QTextEdit(self.centralwidget)
-        self.input_link.setGeometry(QtCore.QRect(90, 680, 374, 40))
+        self.input_link.setGeometry(QtCore.QRect(630, 680, 374, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -280,7 +280,7 @@ class Ui_MainWindow(object):
 
 
         self.methods = QtWidgets.QLabel(self.centralwidget)
-        self.methods.setGeometry(QtCore.QRect(0, 840, 451, 56))
+        self.methods.setGeometry(QtCore.QRect(100, 730, 451, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -296,7 +296,7 @@ class Ui_MainWindow(object):
 
 
         self.pathFeatures = QtWidgets.QLabel(self.centralwidget)
-        self.pathFeatures.setGeometry(QtCore.QRect(340, 450, 681, 56))
+        self.pathFeatures.setGeometry(QtCore.QRect(440, 450, 681, 56))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(12)
@@ -312,7 +312,7 @@ class Ui_MainWindow(object):
 
 
         self.input_pilihan = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.input_pilihan.setGeometry(QtCore.QRect(430, 500, 501, 91))
+        self.input_pilihan.setGeometry(QtCore.QRect(530, 500, 501, 91))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(9)
@@ -325,7 +325,7 @@ class Ui_MainWindow(object):
 
 
         self.BCAButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.BCAButton.setGeometry(QtCore.QRect(280, 900, 191, 30))
+        self.BCAButton.setGeometry(QtCore.QRect(380, 790, 191, 30))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(11)
@@ -338,7 +338,7 @@ class Ui_MainWindow(object):
 
 
         self.BNIButton = QtWidgets.QRadioButton(self.centralwidget)
-        self.BNIButton.setGeometry(QtCore.QRect(280, 940, 191, 30))
+        self.BNIButton.setGeometry(QtCore.QRect(380, 830, 191, 30))
         font = QtGui.QFont()
         font.setFamily("Poppins")
         font.setPointSize(11)
@@ -354,7 +354,7 @@ class Ui_MainWindow(object):
 
 
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1080, 26))
+        self.menubar.setGeometry(QtCore.QRect(100, 0, 1080, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -367,16 +367,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowIcon(QtGui.QIcon(':/icons/canva_pro.png'))
-        MainWindow.setWindowTitle(_translate("MainWindow", "Shopee Flash Sale Bot"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Shopee catalogue automator"))
         self.startButton.setText(_translate("MainWindow", "START"))
         self.exitButton.setText(_translate("MainWindow", "EXIT"))
         self.judul.setText(_translate("MainWindow", "WELCOME TO"))
         self.email.setText(_translate("MainWindow", "Email"))
         self.shopeePayButton.setText(_translate("MainWindow", "ShopeePay"))
         self.human.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/images/Group 69.png\"/></p></body></html>"))
-        self.shopeePayLaterButton.setText(_translate("MainWindow", "ShopeePayLater"))
-        self.judul2.setText(_translate("MainWindow", "SHOPEE FLASH"))
-        self.judul3.setText(_translate("MainWindow", "SALE BOT"))
+        self.mandiriButton.setText(_translate("MainWindow", "Mandiri"))
+        self.judul2.setText(_translate("MainWindow", "SHOPEE CATALOGUE"))
+        self.judul3.setText(_translate("MainWindow", "AUTOMATOR"))
         self.password.setText(_translate("MainWindow", "Password"))
         self.shopee_link.setText(_translate("MainWindow", "Paste Shopee link below!"))
         self.date_time.setText(_translate("MainWindow", "Input designated time below!"))
@@ -400,20 +400,21 @@ class Ui_MainWindow(object):
         minute = dateTime[4]
         
         if self.shopeePayButton.isChecked():
-            metodebayar = self.shopeePayButton.text()
+            metodebayar = 'ShopeePay'
 
-        if self.shopeePayLaterButton.isChecked():
-            metodebayar = self.shopeePayLaterButton.text()
+        if self.mandiriButton.isChecked():
+            metodebayar = 'Bank Mandiri'
 
         if self.BCAButton.isChecked():
-            metodebayar = self.BCAButton.text()
+            metodebayar = 'Bank BCA'
         
         if self.BNIButton.isChecked():
-            metodebayar = self.BNIButton.text()
+            metodebayar = 'Bank BNI'
 
         bayarvia = metodebayar
 
-        metodePembayaranBank = "//div[contains(text(),'" + bayarvia + "')]"
+        metodePembayaranBank = "//div[contains(text(),'" + str(bayarvia) + "')]"
+        print(metodePembayaranBank)
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -421,75 +422,74 @@ class Ui_MainWindow(object):
         driver.get(str(link))
 
         # Click Login
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//a[normalize-space()='Log In']")))
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH, "//a[normalize-space()='Log In']")))
         driver.find_element(By.XPATH, "//a[normalize-space()='Log In']").click()
-        time.sleep(0.2)
-
         # Login
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 40).until(
             EC.presence_of_element_located((By.XPATH, "//input[@placeholder='No. Handphone/Username/Email']")))
         driver.find_element(By.XPATH, "//input[@placeholder='No. Handphone/Username/Email']").send_keys(email)
         driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys(password)
         driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys(Keys.RETURN)
-        time.sleep(0.3)
 
         pause.until(datetime(year, month, day, hour, minute))
+        time.sleep(1.5)
 
+        print('1')
         # Click Buy and Features
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
-
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
+        print('2')
+        print(len(pathFeatures))
         for i in range(len(pathFeatures)):
-            driver.find_element(By.XPATH, "(//button[normalize-space()='" + pathFeatures[i] + "'])[1]").click()
-
+            if pathFeatures[0] != '':
+                driver.find_element(By.XPATH, "(//button[normalize-space()='" + pathFeatures[i] + "'])[1]").click()
+                print('None is counted')
+        print('3')
+        WebDriverWait(driver, 40).until(
+            EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
+        print('4')
         driver.find_element(By.XPATH, "//button[normalize-space()='beli sekarang']").click()
-
+        print('5')
         #Checkout
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located(
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located(
             (By.XPATH, "//span[@class='kcsswk']")))
         driver.find_element(By.XPATH,
                             "//span[@class='kcsswk']").click()
 
-        time.sleep(0.3)
-
         #Customize metode pembayaran
 
-        if bayarvia == 'Transfer Bank':
+        if bayarvia == 'Bank BCA' or 'Bank BNI' or 'Bank Mandiri':
             WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "//button[normalize-space()='Transfer Bank']")))
             driver.find_element(By.XPATH,
                                 "//button[normalize-space()='Transfer Bank']").click()
-            time.sleep(0.3)
             WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
-                                                                            metodePembayaranBank)))
+                                                                            str(metodePembayaranBank))))
             driver.find_element(By.XPATH,
                                 metodePembayaranBank).click()
+            time.sleep(1.5)
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//button[normalize-space()='Buat Pesanan']")))
+            driver.find_element(By.XPATH,"//button[normalize-space()='Buat Pesanan']").click()
+            print("Transfer Bank " + bayarvia + " Success")
 
         if bayarvia == 'ShopeePay':
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "(//span[contains(text(),'ShopeePay')])[1]")))
             driver.find_element(By.XPATH,
                                 "(//span[contains(text(),'ShopeePay')])[1]").click()
-
-        if bayarvia == 'Cash on Delivery':
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
-                                                                            "//button[normalize-space()='COD (Bayar di Tempat)']")))
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//button[normalize-space()='Buat Pesanan']")))
             driver.find_element(By.XPATH,
-                                "//button[normalize-space()='COD (Bayar di Tempat)']").click()
-
-
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
-                                                                        "//button[normalize-space()='Buat Pesanan']")))
-
-        time.sleep(1)
-
-        #Buat pesanan/bayar
-        driver.find_element(By.XPATH,
-                            "//button[normalize-space()='Buat Pesanan']").click()
+                                "//button[normalize-space()='Buat Pesanan']").click()
+            time.sleep(1.5)
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//div[@id='pay-button']")))
+            driver.find_element(By.XPATH,"//div[@id='pay-button']").click()
+            print("ShopeePay Success")
 
         time.sleep(10)
             
 import satir_rc
-
 
 if __name__ == "__main__":
     import sys
