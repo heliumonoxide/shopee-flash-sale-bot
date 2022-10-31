@@ -400,20 +400,21 @@ class Ui_MainWindow(object):
         minute = dateTime[4]
         
         if self.shopeePayButton.isChecked():
-            metodebayar = self.shopeePayButton.text()
+            metodebayar = 'ShopeePay'
 
         if self.shopeePayLaterButton.isChecked():
-            metodebayar = self.shopeePayLaterButton.text()
+            metodebayar = 'ShopeePay Later'
 
         if self.BCAButton.isChecked():
-            metodebayar = self.BCAButton.text()
+            metodebayar = 'Bank BCA'
         
         if self.BNIButton.isChecked():
-            metodebayar = self.BNIButton.text()
+            metodebayar = 'Bank BNI'
 
         bayarvia = metodebayar
 
-        metodePembayaranBank = "//div[contains(text(),'" + bayarvia + "')]"
+        metodePembayaranBank = "//div[contains(text(),'" + str(bayarvia) + "')]"
+        print(metodePembayaranBank)
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -421,75 +422,74 @@ class Ui_MainWindow(object):
         driver.get(str(link))
 
         # Click Login
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//a[normalize-space()='Log In']")))
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH, "//a[normalize-space()='Log In']")))
         driver.find_element(By.XPATH, "//a[normalize-space()='Log In']").click()
-        time.sleep(0.2)
-
         # Login
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 40).until(
             EC.presence_of_element_located((By.XPATH, "//input[@placeholder='No. Handphone/Username/Email']")))
         driver.find_element(By.XPATH, "//input[@placeholder='No. Handphone/Username/Email']").send_keys(email)
         driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys(password)
         driver.find_element(By.XPATH, "//input[@placeholder='Password']").send_keys(Keys.RETURN)
-        time.sleep(0.3)
 
         pause.until(datetime(year, month, day, hour, minute))
+        time.sleep(1.5)
 
+        print('1')
         # Click Buy and Features
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
-
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
+        print('2')
+        print(len(pathFeatures))
         for i in range(len(pathFeatures)):
-            driver.find_element(By.XPATH, "(//button[normalize-space()='" + pathFeatures[i] + "'])[1]").click()
-
+            if pathFeatures[0] != '':
+                driver.find_element(By.XPATH, "(//button[normalize-space()='" + pathFeatures[i] + "'])[1]").click()
+                print('None is counted')
+        print('3')
+        WebDriverWait(driver, 40).until(
+            EC.presence_of_element_located((By.XPATH, "//button[normalize-space()='beli sekarang']")))
+        print('4')
         driver.find_element(By.XPATH, "//button[normalize-space()='beli sekarang']").click()
-
+        print('5')
         #Checkout
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located(
+        WebDriverWait(driver, 40).until(EC.presence_of_element_located(
             (By.XPATH, "//span[@class='kcsswk']")))
         driver.find_element(By.XPATH,
                             "//span[@class='kcsswk']").click()
 
-        time.sleep(0.3)
-
         #Customize metode pembayaran
 
-        if bayarvia == 'Transfer Bank':
+        if bayarvia == 'Bank BCA' or 'Bank BNI':
             WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "//button[normalize-space()='Transfer Bank']")))
             driver.find_element(By.XPATH,
                                 "//button[normalize-space()='Transfer Bank']").click()
-            time.sleep(0.3)
             WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
-                                                                            metodePembayaranBank)))
+                                                                            str(metodePembayaranBank))))
             driver.find_element(By.XPATH,
                                 metodePembayaranBank).click()
+            time.sleep(1.5)
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//button[normalize-space()='Buat Pesanan']")))
+            driver.find_element(By.XPATH,"//button[normalize-space()='Buat Pesanan']").click()
+            print("Transfer Bank " + bayarvia + " Success")
 
         if bayarvia == 'ShopeePay':
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "(//span[contains(text(),'ShopeePay')])[1]")))
             driver.find_element(By.XPATH,
                                 "(//span[contains(text(),'ShopeePay')])[1]").click()
-
-        if bayarvia == 'Cash on Delivery':
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
-                                                                            "//button[normalize-space()='COD (Bayar di Tempat)']")))
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//button[normalize-space()='Buat Pesanan']")))
             driver.find_element(By.XPATH,
-                                "//button[normalize-space()='COD (Bayar di Tempat)']").click()
-
-
-        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
-                                                                        "//button[normalize-space()='Buat Pesanan']")))
-
-        time.sleep(1)
-
-        #Buat pesanan/bayar
-        driver.find_element(By.XPATH,
-                            "//button[normalize-space()='Buat Pesanan']").click()
+                                "//button[normalize-space()='Buat Pesanan']").click()
+            time.sleep(1.5)
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            "//div[@id='pay-button']")))
+            driver.find_element(By.XPATH,"//div[@id='pay-button']").click()
+            print("ShopeePay Success")
 
         time.sleep(10)
             
 import satir_rc
-
 
 if __name__ == "__main__":
     import sys
