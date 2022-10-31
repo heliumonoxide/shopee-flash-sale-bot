@@ -12,12 +12,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import numpy as np
-from backend import pathFeatures
+from backend import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1080, 1080)
+        MainWindow.resize(960, 960)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -40,7 +40,7 @@ class Ui_MainWindow(object):
 
 
         self.startButton = QtWidgets.QPushButton(self.centralwidget)
-        self.startButton.setGeometry(QtCore.QRect(570, 700, 461, 71))
+        self.startButton.setGeometry(QtCore.QRect(520, 700, 461, 71))
         self.startButton.setSizeIncrement(QtCore.QSize(0, 0))
         self.startButton.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
@@ -59,7 +59,7 @@ class Ui_MainWindow(object):
 
 
         self.exitButton = QtWidgets.QPushButton(self.centralwidget)
-        self.exitButton.setGeometry(QtCore.QRect(570, 800, 461, 71))
+        self.exitButton.setGeometry(QtCore.QRect(520, 800, 461, 71))
         self.exitButton.setSizeIncrement(QtCore.QSize(0, 0))
         self.exitButton.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
@@ -210,7 +210,8 @@ class Ui_MainWindow(object):
         self.password.setObjectName("password")
 
 
-        self.input_password = QtWidgets.QTextEdit(self.centralwidget)
+        self.input_password = QtWidgets.QLineEdit(self.centralwidget)
+        self.input_password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.input_password.setGeometry(QtCore.QRect(430, 400, 374, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
@@ -223,10 +224,6 @@ class Ui_MainWindow(object):
         font.setFamily("Poppins")
         font.setPointSize(9)
         self.input_password.setFont(font)
-        self.input_password.setFrameShape(QtWidgets.QFrame.WinPanel)
-        self.input_password.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.input_password.setLineWidth(2)
-        self.input_password.setMidLineWidth(2)
         self.input_password.setObjectName("input_password")
 
 
@@ -390,16 +387,16 @@ class Ui_MainWindow(object):
 
     def start_clicked(self):
         email = str(self.input_email.toPlainText())
-        password = str(self.input_password.toPlainText())
+        password = str(self.input_password.text())
         link = str(self.input_link.toPlainText())
         pathFeatures = str(self.input_pilihan.toPlainText())
         pathFeatures = np.array(pathFeatures.split(','))
         dateTime = str(self.dateTimeInput.dateTime().toString('yyyy,M,d,h,m'))
-        dateTime = np.array(dateTime.split(','))
-        year = dateTime[0]
-        month = dateTime[1]
-        day = dateTime[2]
-        hour = dateTime[3]
+        dateTime = np.array(dateTime.split(',')).astype(np.int)
+        year  = dateTime[0]
+        month  = dateTime[1]
+        day   = dateTime[2]
+        hour  = dateTime[3]
         minute = dateTime[4]
         
         if self.shopeePayButton.isChecked():
@@ -415,6 +412,8 @@ class Ui_MainWindow(object):
             metodebayar = self.BNIButton.text()
 
         bayarvia = metodebayar
+
+        metodePembayaranBank = "//div[contains(text(),'" + bayarvia + "')]"
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
 
@@ -450,14 +449,18 @@ class Ui_MainWindow(object):
         driver.find_element(By.XPATH,
                             "//span[@class='kcsswk']").click()
 
+        time.sleep(0.3)
+
         #Customize metode pembayaran
 
         if bayarvia == 'Transfer Bank':
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH,
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "//button[normalize-space()='Transfer Bank']")))
             driver.find_element(By.XPATH,
                                 "//button[normalize-space()='Transfer Bank']").click()
             time.sleep(0.3)
+            WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
+                                                                            metodePembayaranBank)))
             driver.find_element(By.XPATH,
                                 metodePembayaranBank).click()
 
