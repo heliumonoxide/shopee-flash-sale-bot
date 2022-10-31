@@ -402,8 +402,13 @@ class Ui_MainWindow(object):
         if self.shopeePayButton.isChecked():
             metodebayar = 'ShopeePay'
 
+<<<<<<< HEAD
         if self.mandiriButton.isChecked():
             metodebayar = 'Bank Mandiri'
+=======
+        if self.shopeePayLaterButton.isChecked():
+            metodebayar = 'ShopeePay Later'
+>>>>>>> bdc711954caa8dba5406d213142d97a40bddb772
 
         if self.BCAButton.isChecked():
             metodebayar = 'Bank BCA'
@@ -457,7 +462,11 @@ class Ui_MainWindow(object):
 
         #Customize metode pembayaran
 
+<<<<<<< HEAD
         if bayarvia == 'Bank BCA' or 'Bank BNI' or 'Bank Mandiri':
+=======
+        if bayarvia == 'Bank BCA' or 'Bank BNI':
+>>>>>>> bdc711954caa8dba5406d213142d97a40bddb772
             WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.XPATH,
                                                                             "//button[normalize-space()='Transfer Bank']")))
             driver.find_element(By.XPATH,
