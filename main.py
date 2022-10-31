@@ -1,7 +1,6 @@
 import sys
-from PyQt5.uic import loadUi
-from PyQt5 import QtWidgets;
-from PyQt5.QtWidgets import QDialog, QApplication, QWidget
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QDialog
 from frontend import Ui_MainWindow
 from backend import *
 

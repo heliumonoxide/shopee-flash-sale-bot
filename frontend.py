@@ -414,7 +414,6 @@ class Ui_MainWindow(object):
         bayarvia = metodebayar
 
         metodePembayaranBank = "//div[contains(text(),'" + str(bayarvia) + "')]"
-        print(metodePembayaranBank)
 
         driver = webdriver.Chrome(ChromeDriverManager().install())
 
