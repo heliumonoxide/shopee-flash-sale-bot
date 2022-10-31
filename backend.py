@@ -1,22 +1,7 @@
-from selenium.webdriver.common.by import By
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-import pause
-from datetime import datetime
-import time
 import json
 import os
 from functools import reduce
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-import numpy as np
-
-#Metode bayar
-bank = 'Bank BNI'
-bayarvia = 'Transfer Bank'
-metodePembayaran0 = "//div[contains(text(),'" + bayarvia + "')]"
-metodePembayaranBank = "//div[contains(text(),'" + bank + "')]"
 
 class ChromeWithPrefs(webdriver.Chrome):
     def __init__(self, *args, options=None, **kwargs):
